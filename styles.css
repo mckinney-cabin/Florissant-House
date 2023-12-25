@@ -36,11 +36,12 @@ p {
     padding: 10px;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background: #fff; /* Add a background color if the iframe has transparency */
 }
 
 .video-container iframe {
     width: 100%; /* Full width videos */
-    height: auto; /* Maintain aspect ratio */
+    height: 315px; /* Increased height for better visibility */
 }
 
 .video-container p {
@@ -71,5 +72,9 @@ img {
     .video-container {
         width: 95%; /* Slightly less than full width for some margin */
         margin-bottom: 10px;
+    }
+
+    .video-container iframe {
+        height: auto; /* Adjust height automatically for smaller screens */
     }
 }
