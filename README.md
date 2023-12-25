@@ -1,6 +1,6 @@
 ## Welcome to your Florissant Family Retreat!
 
-Nestled amidst pines at 225 Birdpoint Drive, this **mountain haven** awaits your closest crew. Reconnect in **cozy comfort**, breathe in the **tranquility** of nature, and create **lasting memories**.
+Nestled amidst pines at 225 Birdpoint Road, this **mountain haven** awaits your closest crew. Reconnect in **cozy comfort**, breathe in the **tranquility** of nature, and create **lasting memories**.
 
 **Your mountain playground awaits:**
 
