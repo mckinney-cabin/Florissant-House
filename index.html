@@ -3,32 +3,45 @@
 <head>
   <title>Welcome to the Cabin</title>
   <link rel="stylesheet" href="styles.css">
+  <script>
+    function checkPassword() {
+      var password = prompt('Please enter the password to view this page', '');
+      if (password === 'Mckinneycabin2023') {
+        document.getElementById('protectedContent').style.display = 'block';
+      } else {
+        alert('Incorrect password. Access denied.');
+        window.location = 'about:blank';
+      }
+    }
+  </script>
 </head>
-<body>
+<body onload="checkPassword();">
 
-  <header>
-    <h1>Welcome to the Florissant Cabin!</h1>
-    <p>Escape to the tranquility of the mountains and experience the charm of Florissant.</p>
-  </header>
+  <div id="protectedContent" style="display:none;">
+    <header>
+      <h1>Welcome to the Florissant Cabin!</h1>
+      <p>Escape to the tranquility of the mountains and experience the charm of Florissant.</p>
+    </header>
 
-  <main>
-    <section class="cabin-info">
-      <h2>About the Cabin</h2>
-      <p>Nestled in the heart of Florissant, Colorado, our cozy cabin offers a serene getaway from the hustle of daily life. Surrounded by sprawling forests and close to local attractions, it's the perfect place for nature lovers and adventure seekers alike.</p>
-      <p><a href="winterization.html">Click here for winterization videos.</a></p>
-    </section>
-    
-    <section class="local-attractions">
-      <h2>Local Things to Do</h2>
-      <ul>
-        <li>Explore the Florissant Fossil Beds National Monument, a glimpse into the ancient history of Colorado.</li>
-        <li>Visit the Pikes Peak Historical Society Museum to learn about the local culture and history.</li>
-        <li>Take a scenic drive or hike through the Eleven Mile Canyon Recreation Area.</li>
-        <li>Enjoy fishing or boating at Eleven Mile State Park.</li>
-        <li>Discover the beauty of the Colorado Wolf and Wildlife Center.</li>
-      </ul>
-    </section>
-  </main>
+    <main>
+      <section class="cabin-info">
+        <h2>About the Cabin</h2>
+        <p>Nestled in the heart of Florissant, Colorado, our cozy cabin offers a serene getaway from the hustle of daily life. Surrounded by sprawling forests and close to local attractions, it's the perfect place for nature lovers and adventure seekers alike.</p>
+        <p><a href="winterization.html">Click here for winterization videos.</a></p>
+      </section>
+
+      <section class="local-attractions">
+        <h2>Local Things to Do</h2>
+        <ul>
+          <li>Explore the Florissant Fossil Beds National Monument, a glimpse into the ancient history of Colorado.</li>
+          <li>Visit the Pikes Peak Historical Society Museum to learn about the local culture and history.</li>
+          <li>Take a scenic drive or hike through the Eleven Mile Canyon Recreation Area.</li>
+          <li>Enjoy fishing or boating at Eleven Mile State Park.</li>
+          <li>Discover the beauty of the Colorado Wolf and Wildlife Center.</li>
+        </ul>
+      </section>
+    </main>
+  </div>
 
 </body>
 </html>
