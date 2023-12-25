@@ -5,18 +5,16 @@
   <link rel="stylesheet" href="styles.css">
   <script>
     function checkPassword() {
-      // Check if password is already stored in sessionStorage
       if (sessionStorage.getItem('authenticated') !== 'true') {
         var password = prompt('Please enter the password to view this page', '');
         if (password === 'Mckinneycabin2023') {
           document.getElementById('protectedContent').style.display = 'block';
-          sessionStorage.setItem('authenticated', 'true'); // Store authentication
+          sessionStorage.setItem('authenticated', 'true');
         } else {
           alert('Incorrect password. Access denied.');
           window.location = 'about:blank';
         }
       } else {
-        // Password already entered, display content
         document.getElementById('protectedContent').style.display = 'block';
       }
     }
@@ -35,16 +33,23 @@
         <h2>About the Cabin</h2>
         <p>Nestled in the heart of Florissant, Colorado, our cozy cabin offers a serene getaway from the hustle of daily life. Surrounded by sprawling forests and close to local attractions, it's the perfect place for nature lovers and adventure seekers alike.</p>
         <p><a href="winterization.html">Click here for winterization videos.</a></p>
+        <p><a href="house-info.html">Click here for house information.</a></p>
       </section>
 
       <section class="local-attractions">
-        <h2>Local Things to Do</h2>
+        <h2>Local Favorites</h2>
+        <h3>Destinations</h3>
         <ul>
-          <li>Explore the Florissant Fossil Beds National Monument, a glimpse into the ancient history of Colorado.</li>
-          <li>Visit the Pikes Peak Historical Society Museum to learn about the local culture and history.</li>
-          <li>Take a scenic drive or hike through the Eleven Mile Canyon Recreation Area.</li>
-          <li>Enjoy fishing or boating at Eleven Mile State Park.</li>
-          <li>Discover the beauty of the Colorado Wolf and Wildlife Center.</li>
+          <li><a href="https://cpw.state.co.us/placestogo/parks/ElevenMile">Eleven Mile State Park</a></li>
+          <!-- Add other destinations with their respective links here -->
+        </ul>
+        <h3>Restaurants</h3>
+        <ul>
+          <li>Judges Woodland Park</li>
+          <li>Thunderbird Inn - Florissant</li>
+          <li>Java Haus - Woodland Park</li>
+          <li>McGintys - Divide</li>
+          <!-- Add other restaurants with their respective links if available -->
         </ul>
       </section>
     </main>
