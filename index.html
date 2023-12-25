@@ -5,12 +5,19 @@
   <link rel="stylesheet" href="styles.css">
   <script>
     function checkPassword() {
-      var password = prompt('Please enter the password to view this page', '');
-      if (password === 'Mckinneycabin2023') {
-        document.getElementById('protectedContent').style.display = 'block';
+      // Check if password is already stored in sessionStorage
+      if (sessionStorage.getItem('authenticated') !== 'true') {
+        var password = prompt('Please enter the password to view this page', '');
+        if (password === 'Mckinneycabin2023') {
+          document.getElementById('protectedContent').style.display = 'block';
+          sessionStorage.setItem('authenticated', 'true'); // Store authentication
+        } else {
+          alert('Incorrect password. Access denied.');
+          window.location = 'about:blank';
+        }
       } else {
-        alert('Incorrect password. Access denied.');
-        window.location = 'about:blank';
+        // Password already entered, display content
+        document.getElementById('protectedContent').style.display = 'block';
       }
     }
   </script>
