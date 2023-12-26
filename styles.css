@@ -25,7 +25,7 @@ h1 {
 p {
     font-size: 16px;
     line-height: 1.5;
-    color: #666;
+    color: #333;
 }
 
 /* Video section styling */
@@ -47,7 +47,7 @@ p {
 
 .video-container iframe {
     width: 100%; /* Full width videos */
-    height: 315px; /* Increased height for better visibility */
+    height: 500px; /* Increased height for better visibility */
 }
 
 .video-container p {
