@@ -1,21 +1,40 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
   <title>Leaving Instructions</title>
   <link rel="stylesheet" href="styles.css">
+  <script>
+    function checkPassword() {
+      if (sessionStorage.getItem('authenticated') !== 'true') {
+        var password = prompt('Please enter the password to view this page', '');
+        if (password === 'Mckinneycabin2023') {
+          document.getElementById('protectedContent').style.display = 'block';
+          sessionStorage.setItem('authenticated', 'true');
+        } else {
+          alert('Incorrect password. Access denied.');
+          window.location = 'about:blank';
+        }
+      } else {
+        document.getElementById('protectedContent').style.display = 'block';
+      }
+    }
+  </script>
 </head>
-<body>
+<body onload="checkPassword();">
+  <div id="protectedContent" style="display:none;">
+    <header>
+      <nav class="top-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="house-info.html">Cabin Amenities</a></li>
+          <li><a href="leaving.html" class="active">Leaving and Winterization Procedures</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  <header>
-    <h1>Leaving Instructions</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <section class="instructions">
+  <main>
+  <section>
     <h2>Preparing for Leaving the Cabin</h2>
       <ul>
         <li>Wash, dry, and put away all dishes used during your stay. </li>
@@ -66,6 +85,6 @@
       <p>Well heat lights</p>
     </div>
   </section>
-
+</main>
 </body>
 </html>

@@ -1,19 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>House Information - Florissant Cabin</title>
+  <title>Cabin Information</title>
   <link rel="stylesheet" href="styles.css">
+  <script>
+    function checkPassword() {
+      if (sessionStorage.getItem('authenticated') !== 'true') {
+        var password = prompt('Please enter the password to view this page', '');
+        if (password === 'Mckinneycabin2023') {
+          document.getElementById('protectedContent').style.display = 'block';
+          sessionStorage.setItem('authenticated', 'true');
+        } else {
+          alert('Incorrect password. Access denied.');
+          window.location = 'about:blank';
+        }
+      } else {
+        document.getElementById('protectedContent').style.display = 'block';
+      }
+    }
+  </script>
 </head>
-<body>
-
-  <header>
-    <h1>Florissant Cabin - House Information</h1>
-    <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-        </ul>
-      </nav>
-  </header>
+<body onload="checkPassword();">
+    <div id="protectedContent" style="display:none;">
+    <header>
+        <nav class="top-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="house-info.html" class="active">Cabin Amenities</a></li>
+            <li><a href="leaving.html">Leaving and Winterization Procedures</a></li>
+          </ul>
+        </nav>
+    </header>
 
   <main>
     <section class="house-info">
