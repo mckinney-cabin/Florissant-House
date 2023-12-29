@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: Roboto, Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f5f5f5;
@@ -41,7 +41,6 @@ header {
 .top-nav li a {
     display: block;
     color: white;
-    text-align: center;
     padding: 0 20px;
     text-decoration: none;
     display: flex;
@@ -50,45 +49,44 @@ header {
 }
 
 .top-nav li a.active {
-    background-color: white; /* Active link background */
-    color: #333; /* Active link text color */
+    background-color: white;
+    color: #333;
 }
 
 .top-nav li a:hover:not(.active) {
-    background-color: #555; /* Dark gray background for hover on non-active links */
+    background-color: #555;
 }
 
 .top-nav li a.active:hover {
-    background-color: lightgray; /* Light gray background for active link on hover */
+    background-color: lightgray;
 }
 
 main {
     padding-top: 60px;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-h1 {
-    font-size: 36px;
-    font-weight: bold;
-    color: #333;
-}
-
-p {
-    font-size: 16px;
-    line-height: 1.5;
-    color: #333;
-}
-
-.videos {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.video-container {
-    margin-bottom: 20px;
+h1 {
+    font-size: 42px; /* Increased font size for h1 */
+    font-weight: bold;
+    color: #333;
+}
+
+p, ul, .local-attractions, .instructions, .video-container p {
+    font-size: 18px; /* Increased font size for paragraph, list, and other texts */
+}
+
+.videos, .video-container, img, iframe {
     width: 100%;
+    margin-bottom: 20px;
+}
+
+.video-container {
     border: 1px solid #ccc;
     padding: 10px;
     border-radius: 5px;
@@ -97,38 +95,31 @@ p {
 }
 
 .video-container iframe {
-    width: 100%;
     height: 500px;
 }
 
-.video-container p {
-    margin-top: 10px;
-    font-size: 14px;
-    color: #999;
-    text-align: center;
+.instructions, .local-attractions {
+    margin: 20px 0;
 }
 
-.instructions {
-    margin-top: 40px;
-}
-
-.instructions h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
+iframe {
+    width: 100%;
+    height: 100%;
 }
 
 img {
-    max-width: 100%;
+    width: 80%;
     height: auto;
 }
 
 @media (max-width: 768px) {
     .video-container {
         width: 95%;
-        margin-bottom: 10px;
     }
 
     .video-container iframe {
-        height: auto;
+        width: 100%; /* Ensures iframe takes the full width of its container */
+        height: auto; /* Adjusts height automatically based on aspect ratio */
+        aspect-ratio: 16 / 9; /* Maintains a 16:9 aspect ratio for the video */
     }
 }
