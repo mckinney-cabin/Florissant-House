@@ -60,13 +60,18 @@ header {
 
 .logo-container {
     display: flex;
-    align-items: center;
-    padding-right: 20px;
+    align-items: center; /* Centers the logo vertically */
+    height: 60px; /* Same as the header's height */
+    padding-right: 10px; /* Adjust the right padding as needed */
+    padding-top: 15px; /* Adjust the top padding as needed */
+
 }
 
 .logo-container img {
-    height: 60px; /* Adjust if needed */
+    height: 130px; /* Increase the height as needed but should be less than the header's height */
+    width: auto; /* Maintain the aspect ratio of the image */
 }
+
 
 main {
     padding-top: 60px; /* Adjust this value based on your header's height */
