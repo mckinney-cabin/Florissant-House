@@ -21,8 +21,8 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 0;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-    height: 60px;
+    box-shadow: 0 6px 8px rgba(0,0,0,0.2);
+    height: 75px;
 }
 
 .top-nav ul {
@@ -51,7 +51,7 @@ header {
 }
 
 .top-nav li a.active {
-    color: #007bff; /* Nice blue color for the active item */
+    color: #50da4bf4; /* Nice blue color for the active item */
 }
 
 .top-nav li a:not(.active):hover {
