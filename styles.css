@@ -18,9 +18,11 @@ header {
     left: 0;
     z-index: 1000;
     display: flex;
+    justify-content: space-between;
     align-items: center;
     padding: 0;
     box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    height: 60px;
 }
 
 .top-nav ul {
@@ -28,41 +30,46 @@ header {
     margin: 0;
     padding: 0;
     display: flex;
-    height: 60px;
-    width: 100%;
-    align-items: stretch;
+    align-items: center;
+    height: 100%;
 }
 
 .top-nav li {
     display: flex;
     align-items: center;
-}
-
-.top-nav li a {
-    display: block;
-    color: white;
-    padding: 0 20px;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
     height: 100%;
 }
 
+.top-nav li a {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    text-decoration: none;
+    color: white;
+    height: 100%;
+    transition: color 0.3s; /* Smooth transition for color change */
+}
+
 .top-nav li a.active {
-    background-color: white;
-    color: #333;
+    color: #007bff; /* Nice blue color for the active item */
 }
 
-.top-nav li a:hover:not(.active) {
-    background-color: #555;
+.top-nav li a:not(.active):hover {
+    color: #a9a9a9; /* Slightly darken the text on hover */
 }
 
-.top-nav li a.active:hover {
-    background-color: lightgray;
+.logo-container {
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+}
+
+.logo-container img {
+    height: 60px; /* Adjust if needed */
 }
 
 main {
-    padding-top: 60px;
+    padding-top: 60px; /* Adjust this value based on your header's height */
     margin-left: auto;
     margin-right: auto;
     max-width: 1200px;
@@ -72,13 +79,13 @@ main {
 }
 
 h1 {
-    font-size: 42px; /* Increased font size for h1 */
+    font-size: 42px;
     font-weight: bold;
     color: #333;
 }
 
 p, ul, .local-attractions, .instructions, .video-container p {
-    font-size: 18px; /* Increased font size for paragraph, list, and other texts */
+    font-size: 18px;
 }
 
 .videos, .video-container, img, iframe {
@@ -113,13 +120,21 @@ img {
 }
 
 @media (max-width: 768px) {
-    .video-container {
-        width: 95%;
+    .video-container iframe {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
     }
 
-    .video-container iframe {
-        width: 100%; /* Ensures iframe takes the full width of its container */
-        height: auto; /* Adjusts height automatically based on aspect ratio */
-        aspect-ratio: 16 / 9; /* Maintains a 16:9 aspect ratio for the video */
+    .top-nav ul {
+        width: auto; /* Full width on smaller screens */
+    }
+
+    .logo-container {
+        padding-right: 10px; /* Adjust padding for smaller screens */
+    }
+
+    .logo-container img {
+        height: 50px; /* Adjust logo size for smaller screens */
     }
 }
