@@ -11,8 +11,8 @@ body {
 
 header {
     width: 100%;
-    background-color: #333;
-    color: white;
+    color: #333;
+    background-color: #F8F8F9;
     position: fixed;
     top: 0;
     left: 0;
@@ -20,8 +20,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0;
-    box-shadow: 0 6px 8px rgba(0,0,0,0.2);
+    padding: 0 20px;
     height: 75px;
 }
 
@@ -45,36 +44,37 @@ header {
     align-items: center;
     padding: 0 20px;
     text-decoration: none;
-    color: white;
+    color: #333;
     height: 100%;
     transition: color 0.3s; /* Smooth transition for color change */
+    font-weight: 200;
 }
 
 .top-nav li a.active {
-    color: #50da4bf4; /* Nice blue color for the active item */
+    color: #035b91f4; 
+    font-weight: bold;
+
 }
 
 .top-nav li a:not(.active):hover {
-    color: #a9a9a9; /* Slightly darken the text on hover */
+    color: black; /* Slightly darken the text on hover */
 }
 
 .logo-container {
-    display: flex;
+    display: block;
     align-items: center; /* Centers the logo vertically */
-    height: 60px; /* Same as the header's height */
-    padding-right: 10px; /* Adjust the right padding as needed */
-    padding-top: 15px; /* Adjust the top padding as needed */
-
+    height: 75px; /* Adjust to header height */
+    padding-right: 20px;
 }
 
 .logo-container img {
-    height: 130px; /* Increase the height as needed but should be less than the header's height */
-    width: auto; /* Maintain the aspect ratio of the image */
+    max-height: 50%;
+    width: auto;
+    padding: 20px;
 }
 
-
 main {
-    padding-top: 60px; /* Adjust this value based on your header's height */
+    padding-top: 75px; /* Adjust this value based on your header's height */
     margin-left: auto;
     margin-right: auto;
     max-width: 1200px;
@@ -93,7 +93,7 @@ p, ul, .local-attractions, .instructions, .video-container p {
     font-size: 18px;
 }
 
-.videos, .video-container, img, iframe {
+.videos, .video-container, iframe {
     width: 100%;
     margin-bottom: 20px;
 }
@@ -125,21 +125,20 @@ img {
 }
 
 @media (max-width: 768px) {
-    .video-container iframe {
-        width: 100%;
-        height: auto;
-        aspect-ratio: 16 / 9;
-    }
-
-    .top-nav ul {
+    .top-nav ul, .top-nav li a, .logo-container img {
         width: auto; /* Full width on smaller screens */
+        padding: 0 10px; /* Adjust padding for smaller screens */
     }
 
-    .logo-container {
-        padding-right: 10px; /* Adjust padding for smaller screens */
+    .top-nav li a {
+        font-size: 14px; /* Smaller font size for navigation links */
     }
 
     .logo-container img {
-        height: 50px; /* Adjust logo size for smaller screens */
+        max-height: 50px; /* Adjust logo size for smaller screens */
+    }
+
+    h1, h2, p, ul, li {
+        text-align: center; /* Center align text for mobile */
     }
 }

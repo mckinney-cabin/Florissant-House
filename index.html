@@ -1,19 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Welcome to the Cabin</title>
+  <title>Home</title>
   <link rel="stylesheet" href="styles.css">
-  <link href="https://api.mapbox.com/mapbox-gl-js/v3.0.1/mapbox-gl.css" rel="stylesheet">
-  <script src="https://api.mapbox.com/mapbox-gl-js/v3.0.1/mapbox-gl.js"></script>
-    <script>
+  <script>
     function checkPassword() {
       if (sessionStorage.getItem('authenticated') !== 'true') {
-        var password = prompt('Please enter the password to view this page', '');
+        var password = prompt('Please enter the family password to access this page', '');
         if (password === 'Mckinneycabin2023') {
           document.getElementById('protectedContent').style.display = 'block';
           sessionStorage.setItem('authenticated', 'true');
         } else {
-          alert('Incorrect password. Access denied.');
+          alert('That password wrong. Please try again or ask Dylan for help.');
           window.location = 'about:blank';
         }
       } else {
@@ -23,8 +21,7 @@
   </script>
 </head>
 <body onload="checkPassword();">
-
-  <div id="protectedContent" style="display:none;">
+    <div id="protectedContent" style="display:none;">
     <header>
         <nav class="top-nav">
           <ul>
@@ -34,49 +31,37 @@
           </ul>
         </nav>
         <div class="logo-container">
-          <img src="Images/McKinney Cabin-logos_white.png" alt="McKinney Cabin Logo">
-        </div>
+            <img src="Images/McKinney Cabin-logos_black.png" alt="McKinney Cabin Logo">
+          </div>
     </header>
 
     <main>
-        <h1>Welcome to the McKinney Cabin!</h1>
-        <img src="Images/Cabin.jpeg" alt="Cabin Image">
-        <div id="map"></div>
-        <script>
-          mapboxgl.accessToken = 'pk.eyJ1IjoiZHlsYW56amFtZXMxNCIsImEiOiJjbHFxMW5nZ3ozNjZ4MmlvMHFldm85b3JpIn0.75sA6AD233N3TCMn0ZFosw';
-          const map = new mapboxgl.Map({
-            container: 'map', // container ID
-            style: 'mapbox://styles/mapbox/streets-v11', // style URL
-            center: [-74.5, 40], // starting position [lng, lat]
-            zoom: 9 // starting zoom
-          });
-        </script>        
-        <h2>Local Favorites</h2>
-        <h3>Destinations</h3>
+        <h1>Here are some of our local favorites!</h1>
+        <h2>Destinations</h2>
         <ul>
-          <li><a href="https://cpw.state.co.us/placestogo/parks/ElevenMile">Eleven Mile State Canyon</a>: (10 min) Fishing, hiking, and picnicing.</li>
-          <li><a href="https://cpw.state.co.us/placestogo/parks/Mueller">Mueller State Park</a>: (10 min) Trails, sledding, and wildlife.</li>
-          <li><a href="https://www.breckenridge.com">Breckenridge Ski area</a>: (1.5-2 hr) Ski resort $$$, endless of terrain.</li>
-          <li><a href="https://www.keystoneresort.com">Keystone Ski area</a>: (2-2.5 hr) Ski resort $$$, endless terrain.</li>
-          <li><a href="https://www.skicooper.com">Ski Cooper Ski area</a>: (2-2.5 hr) Ski resort $, affordable and no crowds.</li>
-          <li><a href="https://www.nps.gov/flfo/index.htm">Florissant Fossil Beds National Monument</a>: (5 min) Nice hikes.</li>
-          <li><a href="https://www.gardenofgods.com">Garden of the Gods</a>: (1 hr) Hikes around rock monuments.</li>
+          <p><a href="https://cpw.state.co.us/placestogo/parks/ElevenMile">Eleven Mile State Canyon</a>: (10 min) Fishing, hiking, and picnicing.</p>
+          <p><a href="https://cpw.state.co.us/placestogo/parks/Mueller">Mueller State Park</a>: (10 min) Trails, sledding, and wildlife.</p>
+          <p><a href="https://www.breckenridge.com">Breckenridge Ski area</a>: (1.5-2 hr) Ski resort $$$, endless of terrain.</p>
+          <p><a href="https://www.keystoneresort.com">Keystone Ski area</a>: (2-2.5 hr) Ski resort $$$, endless terrain.</p>
+          <p><a href="https://www.skicooper.com">Ski Cooper Ski area</a>: (2-2.5 hr) Ski resort $, affordable and no crowds.</p>
+          <p><a href="https://www.nps.gov/flfo/index.htm">Florissant Fossil Beds National Monument</a>: (5 min) Nice hikes.</p>
+          <p><a href="https://www.gardenofgods.com">Garden of the Gods</a>: (1 hr) Hikes around rock monuments.</p>
           <!-- Add other destinations with their respective links here -->
         </ul>
-        <h3>Restaurants</h3>
+        <h2>Restaurants</h2>
         <ul>
-            <li><a href="https://www.judgeschargrill.com/">Judges Char-grill - Woodland Park</a>: (15 min) American and Mexican dishes, family meals or watching a game.</li>
-            <li><a href="https://www.zmenu.com/thunderbird-inn-florissant-online-menu/">Thunderbird Inn - Florissant</a>: (5 min) Burgers, live music, and drinks.</li>
-            <li><a href="https://www.javahaus.co/">Java Haus - Woodland Park</a>: (15 min) Coffee, pastries, and welcoming environment, ideal for a quick coffee break.</li>
-            <li><a href="https://www.mcgintyswoodovenpub.net/">McGinty's - Divide</a>: (10 min) A unique pub with wood-fired pizzas, Irish specialties, and a variety of beers and spirits.</li>
-            <li><a href="https://www.bierwerks.com/">Bierwerks Brewery - Woodland Park</a>: (15 min) A local favorite brewery.</li>
+            <p><a href="https://www.judgeschargrill.com/">Judges Char-grill - Woodland Park</a>: (15 min) American and Mexican dishes, family meals or watching a game.</p>
+            <p><a href="https://www.zmenu.com/thunderbird-inn-florissant-online-menu/">Thunderbird Inn - Florissant</a>: (5 min) Burgers, live music, and drinks.</p>
+            <p><a href="https://www.javahaus.co/">Java Haus - Woodland Park</a>: (15 min) Coffee, pastries, and welcoming environment, ideal for a quick coffee break.</p>
+            <p><a href="https://www.mcgintyswoodovenpub.net/">McGinty's - Divide</a>: (10 min) A unique pub with wood-fired pizzas, Irish specialties, and a variety of beers and spirits.</p>
+            <p><a href="https://www.bierwerks.com/">Bierwerks Brewery - Woodland Park</a>: (15 min) A local favorite brewery.</p>
             <!-- Add other restaurants with their respective links if available -->
           </ul>
-        <h3>Local Grocery Stores</h3>
+        <h2>Groceries</h2>
         <ul>
-            <li>Walmart Supercenter: Located at 19600 E US Highway 24</li>
-            <li>City Market: Situated at 777 Gold Hill Pl S</li>
-            <li>Safeway: Found at 1101 E US Hwy 24</li>
+            <p>Walmart Supercenter: Located at 19600 E US Highway 24, Woodland Park</p>
+            <p>City Market: Situated at 777 Gold Hill Pl S, Woodland Park</p>
+            <p>Safeway: Found at 1101 E US Hwy 24, Woodland Park</p>
         </ul>
       </section>
     </main>
